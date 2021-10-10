@@ -1,0 +1,57 @@
+.header {
+    margin-top: 2.5rem;
+}
+
+.header h1 {
+    text-align: center;
+    color: white;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+}
+
+.project-type {
+    display: flex;
+    flex-direction: column;
+    padding: .5rem;
+    margin: 1rem;
+    color: white;
+}
+
+.project-type label {
+    font-size: 1.5rem;
+    margin-bottom: .5rem;
+    font-weight: bold;
+}
+
+.project-type select {
+    padding: .5rem;
+    font-weight: bold;
+    background: #959090;
+    border-radius: .3rem;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    margin: 1rem;
+    padding: .5rem;
+}
+
+.calculations-info {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rebeccapurple;
+    border-radius: .3rem;
+}
+
+.calculations-info p{
+    color: white;
+    font-weight: bold;
+    font-size: 1.5rem;
+}

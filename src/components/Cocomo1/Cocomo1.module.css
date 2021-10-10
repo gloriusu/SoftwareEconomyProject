@@ -1,0 +1,22 @@
+.model-level {
+    display: flex;
+    flex-direction: column;
+    padding: .5rem;
+    margin: 1rem auto;
+    max-width: 60rem;
+    color: white;
+}
+
+.model-level label {
+    font-size: 1.5rem;
+    margin-bottom: .5rem;
+    font-weight: bold;
+    text-align: center;
+}
+
+.model-level select {
+    padding: .5rem;
+    font-weight: bold;
+    background: #959090;
+    border-radius: .3rem;
+}
