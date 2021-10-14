@@ -44,7 +44,7 @@ const cocomo1Slice = createSlice({
         selected: INITIAL_PARAMETERS,
     },
     reducers: {
-        addSelectedOption(state, action) {
+        changeSelectedOption(state, action) {
             state.selected[action.payload.id] = action.payload.select;
         }
     }

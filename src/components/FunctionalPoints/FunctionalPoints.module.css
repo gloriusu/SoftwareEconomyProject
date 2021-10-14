@@ -1,6 +1,10 @@
-.form {
+.wrapper {
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    margin: 1rem;
+    padding: .5rem;
 }
 
 .project-type {
@@ -24,17 +28,9 @@
     border-radius: .3rem;
 }
 
-.wrapper {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    margin: 1rem;
-    padding: .5rem;
-}
-
 .calculations-info {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     background: rebeccapurple;
@@ -42,8 +38,9 @@
 }
 
 .calculations-info p{
+    padding: .5rem;
+    margin: 0;
     color: white;
     font-weight: bold;
     font-size: 1.5rem;
 }
-

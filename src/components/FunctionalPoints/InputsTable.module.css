@@ -1,0 +1,27 @@
+.table-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+
+}
+
+table {
+    background: #480584;
+    border-radius: .6rem;
+    padding: .3rem;
+    margin-top: 1rem;
+}
+
+th, td {
+    color: white;
+}
+
+td input{
+    max-width: 4rem;
+    background: #959090;
+    outline: none;
+    border: 1px solid black;
+    border-radius: .3rem;
+    font-weight: bold;
+}

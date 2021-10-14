@@ -1,11 +1,11 @@
 import React from 'react';
-import classes from "./SelectItem.module.css";
+import classes from "./Select.module.css";
 
-const SelectItem = props => {
+const Select = props => {
 
     return (
         <div className={classes['parameter-item']}>
-            <label>{props.header}</label>
+            <label>{props.title}</label>
             <select onChange={props.onChange}>
                 {props.data.map((value, index) => (
                     <option value={value} key={index}>{value}</option>
@@ -15,4 +15,4 @@ const SelectItem = props => {
     );
 };
 
-export default SelectItem;
+export default Select;

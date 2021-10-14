@@ -1,12 +1,13 @@
 import React, {useState} from 'react';
-import classes from './Cocomo2.module.css';
+import Select from "../Select";
 import Card from "../UI/Card";
 import Input from "../UI/Input";
-import SelectItem from "./SelectItem";
+import Button from "../UI/Button";
+import Delimiter from "../UI/Delimiter";
+import classes from './Cocomo2.module.css';
 
 import {useSelector, useDispatch} from "react-redux";
 import {cocomo2Actions} from "../../store/cocomo2-slice";
-import Button from "../UI/Button";
 
 
 const Cocomo2 = () => {
@@ -37,7 +38,7 @@ const Cocomo2 = () => {
                 sf += +selectedSF[i];
             }
         }
-        let E = 0.91 + 0.01 * sf;
+        const E = 0.91 + 0.01 * sf;
 
         for (let i = 0; i < size; i++) {
             if (dataset[i] === "n/a") {
@@ -59,13 +60,13 @@ const Cocomo2 = () => {
 
     const assessment = toggleAssessment ?
         full[1].map((item, index) => (
-            <SelectItem
+            <Select
                 key={index}
                 id={index}
-                header={item[0]}
+                title={item[0]}
                 data={item[1]}
                 onChange={(event) => dispatch(
-                    cocomo2Actions.addSelectedDetailedOption({
+                    cocomo2Actions.changeSelectedDetailedOption({
                         id: index,
                         select: event.target.value,
                     }))
@@ -74,13 +75,13 @@ const Cocomo2 = () => {
         ))
         :
         full[0].map((item, index) => (
-            <SelectItem
+            <Select
                 key={index}
                 id={index}
-                header={item[0]}
+                title={item[0]}
                 data={item[1]}
                 onChange={(event) => dispatch(
-                    cocomo2Actions.addSelectedAdvancedOption({
+                    cocomo2Actions.changeSelectedAdvancedOption({
                         id: index,
                         select: event.target.value,
                     }))
@@ -104,20 +105,20 @@ const Cocomo2 = () => {
                     <Input onChange={inputChangeHandler}/>
                     <div>
                         {full[2].map((item, index) => (
-                            <SelectItem
+                            <Select
                                 key={index}
                                 id={index}
-                                header={item[0]}
+                                title={item[0]}
                                 data={item[1]}
                                 onChange={(event) => dispatch(
-                                    cocomo2Actions.addSelectedSFOption({
+                                    cocomo2Actions.changeSelectedSFOption({
                                         id: index,
                                         select: event.target.value,
                                     }))
                                 }
                             />
                         ))}
-                        <div className={classes.delimiter}></div>
+                        <Delimiter />
                         {assessment}
                     </div>
                 </div>

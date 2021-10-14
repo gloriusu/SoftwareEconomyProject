@@ -2,6 +2,7 @@ import {BrowserRouter as Router, Route, Switch, Redirect} from 'react-router-dom
 import Cocomo1 from "./components/Cocomo1/Cocomo1";
 import Cocomo2 from "./components/Cocomo2/Cocomo2";
 import MainHeader from "./components/MainHeader";
+import FunctionalPoints from "./components/FunctionalPoints/FunctionalPoints";
 
 
 function App() {
@@ -19,6 +20,9 @@ function App() {
                 </Route>
                 <Route path="/cocomo2" exact>
                     <Cocomo2/>
+                </Route>
+                <Route path="/func_points" exact>
+                    <FunctionalPoints />
                 </Route>
             </Switch>
         </Router>

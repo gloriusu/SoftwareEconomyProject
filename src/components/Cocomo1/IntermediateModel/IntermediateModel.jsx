@@ -1,12 +1,11 @@
 import {Fragment, useState} from 'react';
-
-import classes from './IntermediateModel.module.css';
 import DatasetItem from "./DatasetItem";
-
-import {useSelector} from "react-redux";
 import Button from "../../UI/Button";
 import Input from "../../UI/Input";
 import Card from "../../UI/Card";
+import classes from './IntermediateModel.module.css';
+
+import {useSelector} from "react-redux";
 
 
 const COEFFICIENTS = {  // coefficients
@@ -22,9 +21,7 @@ const IntermediateModel = () => {
     const [projectType, setProjectType] = useState(Object.keys(COEFFICIENTS)[0]);
     const [calculationData, setCalculationData] = useState(null);
 
-
     const {full, selected} = useSelector(state => state.cocomo1);
-
 
     const inputChangeHandler = event => {
         setCodeLines(event.target.value);

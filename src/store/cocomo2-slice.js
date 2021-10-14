@@ -91,13 +91,13 @@ const cocomo2Slice = createSlice({
         detailedData: INITIAL_DETAILED_DATA,
     },
     reducers: {
-        addSelectedSFOption(state, action) {
+        changeSelectedSFOption(state, action) {
             state.selectedSF[action.payload.id] = action.payload.select;
         },
-        addSelectedAdvancedOption(state, action) {
+        changeSelectedAdvancedOption(state, action) {
             state.advancedData[action.payload.id] = action.payload.select;
         },
-        addSelectedDetailedOption(state, action) {
+        changeSelectedDetailedOption(state, action) {
             state.detailedData[action.payload.id] = action.payload.select;
         }
     }

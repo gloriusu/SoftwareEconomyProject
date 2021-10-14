@@ -1,4 +1,4 @@
-import classes from './DatasetItem.module.css';
+import classes from '../../Select.module.css';
 
 import {useSelector, useDispatch} from "react-redux";
 import {cocomo1Actions} from "../../../store/cocomo1-slice";
@@ -10,7 +10,7 @@ const DatasetItem = props => {
     const dispatch = useDispatch();
 
     const selectChangeHandler = event => {
-        dispatch(cocomo1Actions.addSelectedOption({
+        dispatch(cocomo1Actions.changeSelectedOption({
             id: props.id,
             select: event.target.value,
         }));
